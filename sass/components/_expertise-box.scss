@@ -1,0 +1,59 @@
+/*------------------------------------------------------------------
+  	[expertise-box]
+------------------------------------------------------------------*/
+
+.expertise-box {
+  background: $color-white;
+  padding: 30px;
+
+  .expertise-box-element,
+  .expertise-box-info {
+    @include translate3d(0, 0, 0);
+    @include cubic-transition(
+      $delay: 0,
+      $duration: 300ms,
+      $property: (
+        all,
+      )
+    );
+  }
+
+  .expertise-box-icon {
+    display: block;
+    @include font($size: 30px);
+    color: $color-link-hover;
+    margin-bottom: 30px;
+  }
+
+  .expertise-box-link {
+    @include position(absolute, $top: 0, $left: 0, $right: 0, $bottom: 0);
+    display: block;
+    z-index: 3;
+    text-decoration: none;
+  }
+
+  &:hover {
+    .expertise-box-element {
+      opacity: 0;
+      @include translate3d(0, -100%, 0);
+      @include cubic-transition(
+        $delay: 0,
+        $duration: 300ms,
+        $property: (
+          all,
+        )
+      );
+    }
+
+    .expertise-box-info {
+      @include translate3d(0, -30%, 0);
+      @include cubic-transition(
+        $delay: 0,
+        $duration: 300ms,
+        $property: (
+          all,
+        )
+      );
+    }
+  }
+}

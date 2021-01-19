@@ -1,0 +1,48 @@
+.intro-block {
+  height: 100vh;
+  padding: 220px 0 130px;
+
+  .intro-block-title {
+    font-size: 70px;
+    color: $color-white;
+  }
+
+  .intro-block-subtitle {
+    font-size: 25px;
+    color: $color-white;
+  }
+
+  .intro-block-social-icon-li {
+    display: inline-block;
+
+    .intro-block-social-icon {
+      display: inline-block;
+      @include size(40px);
+      @include font($size: 16px);
+      color: $color-white;
+      text-align: center;
+      border-radius: 50%;
+      vertical-align: middle;
+      padding: 11px;
+      @include cubic-transition(
+        $delay: 0,
+        $duration: 300ms,
+        $property: (
+          all,
+        )
+      );
+
+      &:hover {
+        color: $color-heading;
+        background: $color-white;
+        @include cubic-transition(
+          $delay: 0,
+          $duration: 300ms,
+          $property: (
+            all,
+          )
+        );
+      }
+    }
+  }
+}
